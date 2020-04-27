@@ -24,7 +24,7 @@
         <h1>Users List of Activities!</h1>
         <?php
         $id = 1;
-        $sql = "SELECT * FROM activities where id = $id";
+        $sql = "SELECT * FROM activities where id = $id ORDER BY activity";
     
         $results = mysqli_query($mysqli, $sql);
 

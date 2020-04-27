@@ -19,7 +19,9 @@ class activity{
                 <h6 class=\"card-subtitle mb-2 text-muted\">dates</h6>
                 <p class=\"card-text\">" . $this->note . "</p>
                 <p> This task id" . $this->act_id . "
-                <button name=\"done\">DONE</button>
+                <br>
+                <button name=\"edit\" value=". $this->act_id ."class=\"button\">EDIT</button>
+                <button name=\"done\" value=". $this->act_id ."class=\"button\">DONE</button>
             </div>
         </div>"; 
     }
