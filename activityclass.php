@@ -20,8 +20,10 @@ class activity{
                 <p class=\"card-text\">" . $this->note . "</p>
                 <p> This task id" . $this->act_id . "
                 <br>
-                <button name=\"edit\" value=". $this->act_id ."class=\"button\">EDIT</button>
-                <button name=\"done\" value=". $this->act_id ."class=\"button\">DONE</button>
+                <form action=\"index.php\" method=\"post\">
+                <button type=\"submit\" name=\"edit\" value=\"". $this->act_id ."\" class=\"button\">EDIT</button>
+                <button type=\"submit\" name=\"done\" value=". $this->act_id ." class=\"button\">DONE</button>
+                </form>
             </div>
         </div>"; 
     }

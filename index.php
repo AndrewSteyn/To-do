@@ -31,7 +31,7 @@
         $row = mysqli_fetch_assoc($results);
 
         if (mysqli_num_rows($results)>=0){
-            $activity = new activity($row["activity"],$row["note"],$row["act_id"]);
+            $activity = new activity($row["activity"],$row["note"],$row["act_id"]); 
             $activity->displayTask();
             while($row = mysqli_fetch_assoc($results)) {
                 $activity = new activity($row["activity"],$row["note"],$row["act_id"]);
@@ -41,6 +41,18 @@
                 echo "Lets Add Some Activities";
             }
         
+
+            if (isset($_POST['done'])){
+                $doneid = $_POST['done'];
+                echo $doneid;
+                $sql = "DELETE FROM activities
+                WHERE id = '1' AND act_id = '$doneid'";
+                 if ($mysqli->query($sql)) {
+                    unset($sql);
+            }else {
+                echo "Error: " . $sql . "<br>" . $mysqli->error;
+            }
+        }	
         ?>
         </div>
                 <div id="add">
