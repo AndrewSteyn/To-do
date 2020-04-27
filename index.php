@@ -31,10 +31,10 @@
         $row = mysqli_fetch_assoc($results);
 
         if (mysqli_num_rows($results)>=0){
-            $activity = new activity($row["activity"],$row["note"],$row["act_id"]); 
+            $activity = new activity($row["activity"],$row["note"],$row["act_id"],$row["due_date"]); 
             $activity->displayTask();
             while($row = mysqli_fetch_assoc($results)) {
-                $activity = new activity($row["activity"],$row["note"],$row["act_id"]);
+                $activity = new activity($row["activity"],$row["note"],$row["act_id"],$row["due_date"]);
                 $activity->displayTask();
                 }
             }else{
@@ -59,7 +59,7 @@
                     <form action="<?=$_SERVER['PHP_SELF'];?>" method="post">
                         <label class="input" for="act">Add Task: </label><input name="act" type="text" required>
                         <br>
-                        <!-- <label class="input" for="date">Date of Task:</label><input name="date" type="date"> -->
+                        <label class="input" for="date">Date of Task:</label><input name="date" type="date" required>
                         <br>
                         <label class="input" for="note">Note: </label><input name="note" type="text" required>
                         <br>
@@ -80,8 +80,9 @@
                 if (isset($_POST['act'])) {
                     $cleanact = sanitizeString($_POST['act']);
                     $cleannote = sanitizeString($_POST['note']);
-                    $sql = "INSERT INTO activities (activity, note, id)
-                    VALUES ('$cleanact','$cleannote','1')";
+                    $cleandate = sanitizeString($_POST['date']);
+                    $sql = "INSERT INTO activities (activity, note, id, due_date)
+                    VALUES ('$cleanact','$cleannote','1', '$cleandate')";
                     //Execute query and validate success
                      if ($mysqli->query($sql)) {
                         //echo "New record created successfully";
