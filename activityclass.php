@@ -23,12 +23,14 @@ class activity{
                 <br>
                 <form action=\"index.php\" method=\"post\">
                 <button type=\"submit\" name=\"done\" value=". $this->act_id ." class=\"button\">DONE</button>
-                <button onclick=\"editFunction()\">
+                <button class=\"edit\"onclick=\"editFunction()\">EDIT</button>
                 </form>
-                <div id=\"edit".$this->act_id."\" style=\"display: none\">
-                    <label for=\"edit_act\">Activity</label><input type=\"text\" name=\"edit_act\">
-                    <label for=\"edit_note\">Note</label><input type=\"text\" name=\"edit_note\">
-                    <button type=\"submit\" name=\"edit\" value=\"". $this->act_id ."\" class=\"button\">EDIT</button>    
+                <div class=\"edit\" id=\"edit".$this->act_id."\" style=\"display: none\">
+                    <form action=\index.php\" method=\"post\">
+                        <label for=\"edit_act\">Activity</label><input type=\"text\" name=\"edit_act\">
+                        <label for=\"edit_note\">Note</label><input type=\"text\" name=\"edit_note\">
+                        <button type=\"submit\" name=\"edit\" value=\"". $this->act_id ."\" class=\"button\">EDIT</button> 
+                    </form>   
                 </div>
 
                 

@@ -13,6 +13,7 @@
         <meta name="vieport" content="width=device-width, initial-scale=1">
 
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="css/styles.css">
 
         <title>What's there 2DO</title>
@@ -21,7 +22,10 @@
 
     <body>
         <div class="center">
-        <h1>Users List of Activities!</h1>
+        <h1>Your List of Activities!</h1>
+            <div class="logout">
+                <a href="logout.php">LOGOUT</a>
+            </div>
         <?php
         $id = 1;
         $sql = "SELECT * FROM activities where id = $id ORDER BY activity";

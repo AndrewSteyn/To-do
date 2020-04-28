@@ -2,8 +2,8 @@
 
 //login creds
 
-define ('DB_SERVER', 'localhost');
-define ('DB_USERNAME', 'root');
-define ('DB_PASSWORD', '');
-define ('DB_NAME', 'todo');
+define ('DB_SERVER', '167.71.74.228');
+define ('DB_USERNAME', 'andrew');
+define ('DB_PASSWORD', 'Abut87Kirby');
+define ('DB_NAME', 'WDI2020_andrew');
 ?>

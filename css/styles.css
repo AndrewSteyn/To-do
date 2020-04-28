@@ -1,5 +1,16 @@
 /* login css */
-
+body{
+  font-family: 'Crimson Text', serif;
+}
+.sidebar{
+  font-family: 'Crimson Text', serif;
+  background-color: white;
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  padding-bottom: 30px;
+}
   /* End Login css */
 
 
@@ -7,10 +18,10 @@
   /* Index css */
 body{
   background-color: rgb(91, 91, 218);
+  font-family: 'Crimson Text', serif;
 }
 .center {
   width: 67%;
-  background-color: white;
   margin-left: auto;
   margin-right: auto;
 }
@@ -20,17 +31,19 @@ body{
     padding-top: 60px;
   }
   .card{
+    background-color: white;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 20px;
   }
 
   #add{
     text-align: center;
-    background-color: white;
     margin-left: auto;
     margin-right: auto;
-    width: 67%;
-    padding-bottom: 10px;
+    background-color: white;
+    width: 400px;
+    padding-bottom: 30px;
     display: none;
   }
   .input{
@@ -48,8 +61,8 @@ body{
     display: block;
     margin-left: auto;
     margin-right: auto;
-    background-color: rgb(255, 255, 255);
     padding: 10px;
+    color: black;
     border-color: rgb(0, 0, 0);
     border-radius: 3px;
 }
@@ -67,4 +80,14 @@ body{
 
 .button:hover {background-color: #e7e7e7;}
 
+.edit{
+
+}
+
+.logout{
+  width: 20px;
+  right: 0px;
+  top: 0px;
+  background-color: white;
+}
   /* End Index css */
