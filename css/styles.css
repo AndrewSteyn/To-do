@@ -1,9 +1,6 @@
 /* login css */
-body{
-  font-family: 'Crimson Text', serif;
-}
+
 .sidebar{
-  font-family: 'Crimson Text', serif;
   background-color: white;
   width: 60%;
   margin-left: auto;
@@ -17,8 +14,11 @@ body{
 
   /* Index css */
 body{
+  background: rgb(91, 91, 218);
+  background: -webkit-linear-gradient(to right, rgb(91, 91, 218), #ef629f);
+  background: linear-gradient(to right, rgb(91, 91, 218), #ef629f);
   background-color: rgb(91, 91, 218);
-  font-family: 'Crimson Text', serif;
+  text-align:center;
 }
 .center {
   width: 67%;
@@ -29,6 +29,7 @@ body{
   h1{
     text-align: center;
     padding-top: 60px;
+    color: white;
   }
   .card{
     background-color: white;
@@ -37,15 +38,6 @@ body{
     margin-bottom: 20px;
   }
 
-  #add{
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-    background-color: white;
-    width: 400px;
-    padding-bottom: 30px;
-    display: none;
-  }
   .input{
     margin: 10px;
   }
@@ -80,14 +72,27 @@ body{
 
 .button:hover {background-color: #e7e7e7;}
 
-.edit{
-
+h3{
+  color: white;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
-.logout{
-  width: 20px;
-  right: 0px;
-  top: 0px;
-  background-color: white;
+.invisible{
+  color: #e7e7e700;
+}
+
+#headingg{
+  font-family: 'Dancing Script', cursive;
+  font-size: 3em;
+}
+.btn{
+  font-family: 'Dancing Script', cursive; 
+}
+.card-body{
+font-family: 'Lato', sans-serif;
 }
   /* End Index css */
